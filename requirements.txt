@@ -28,3 +28,6 @@ gunicorn==19.6.0
 
 blueapps==4.8.0
 
+# 自定义依赖
+python-dotenv==0.20.0
+
