@@ -3,6 +3,7 @@ from .models import WeChatUser, Status
 from blueapps.account import get_user_model
 from blueapps.conf import settings
 from django.http import HttpResponse
+from config import APP_CODE
 
 
 def home(request):
