@@ -1,6 +1,3 @@
-
-
-
 # -*- coding: utf-8 -*-
 """
 Tencent is pleased to support the open source community by making 蓝鲸智云PaaS平台社区版 (BlueKing PaaS Community
@@ -39,5 +36,6 @@ def contact(request):
     """
     return render(request, "home_application/contact.html")
 
+
 def helloworld(request):
-    return render(request,"home_application/helloworld.html")
+    return render(request, "home_application/helloworld.html")

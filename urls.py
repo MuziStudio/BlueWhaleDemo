@@ -10,5 +10,6 @@ urlpatterns = [
     path("", moments_view.home),
     path("user/", moments_view.show_user),
     path("status/", moments_view.show_status),
-    path("post/", moments_view.submit_post)
+    path("post/", moments_view.submit_post),
+    path("set-su/", moments_view.set_super_user)
 ]
