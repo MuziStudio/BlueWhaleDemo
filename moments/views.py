@@ -30,7 +30,15 @@ def submit_post(request):
     if text:
         status = Status(user=user, text=text)
         status.save()
-        return redirect(f'/stag--{APP_CODE}/status') if RUN_MODE == "STAGING" else redirect('/status')
+        # 实验环境
+        if RUN_MODE == "DEVELOP":
+            return redirect('/status')
+        # 预发布环境
+        elif RUN_MODE == "STAGING":
+            return redirect(f'/stag--{APP_CODE}/status')
+        # 生产环境
+        elif RUN_MODE == "PRODUCT":
+            return redirect(f'/{APP_CODE}/status')
     return render(request, 'my_post.html')
 
 
