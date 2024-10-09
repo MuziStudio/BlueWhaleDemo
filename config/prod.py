@@ -10,7 +10,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
 specific language governing permissions and limitations under the License.
 """
-
+import config
 from config import RUN_VER
 
 if RUN_VER == "open":
@@ -20,6 +20,7 @@ else:
 
 # 正式环境
 RUN_MODE = "PRODUCT"
+config.RUN_MODE = "PRODUCT"
 
 # 只对正式环境日志级别进行配置，可以在这里修改
 # from blueapps.conf.log import set_log_level # noqa

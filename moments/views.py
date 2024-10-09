@@ -1,12 +1,15 @@
+import os
+
 from django.shortcuts import render, redirect
 from .models import WeChatUser, Status
 from blueapps.account import get_user_model
 from blueapps.conf import settings
 from django.http import HttpResponse
-from config import APP_CODE
+from config import APP_CODE, RUN_MODE
 
 
 def home(request):
+    print(RUN_MODE)
     return render(request, 'homepage.html')
 
 
@@ -27,7 +30,7 @@ def submit_post(request):
     if text:
         status = Status(user=user, text=text)
         status.save()
-        return redirect(f'/stag--{APP_CODE}/status')
+        return redirect(f'/stag--{APP_CODE}/status') if RUN_MODE == "STAGING" else redirect('/status')
     return render(request, 'my_post.html')
 
 

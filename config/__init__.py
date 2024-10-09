@@ -19,7 +19,7 @@ import os
 # Django starts so that shared_task will use this app.
 from blueapps.core.celery import celery_app
 
-__all__ = ["celery_app", "RUN_VER", "APP_CODE", "SECRET_KEY", "BK_URL", "BASE_DIR"]
+__all__ = ["celery_app", "RUN_VER", "APP_CODE", "SECRET_KEY", "BK_URL", "BASE_DIR", "RUN_MODE"]
 
 
 # app 基本信息
@@ -49,3 +49,5 @@ BK_URL = None
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+RUN_MODE = ""
