@@ -21,6 +21,7 @@ else:
 # 正式环境
 RUN_MODE = "PRODUCT"
 config.RUN_MODE = "PRODUCT"
+BK_STATIC_URL = f"/{APP_CODE}"
 
 # 只对正式环境日志级别进行配置，可以在这里修改
 # from blueapps.conf.log import set_log_level # noqa
@@ -41,4 +42,3 @@ config.RUN_MODE = "PRODUCT"
 #         },
 #     }
 # )
-
